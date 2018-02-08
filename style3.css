@@ -1,0 +1,96 @@
+@keyframes blink {
+  to {
+    opacity: .0;
+  }
+}
+
+@keyframes type {
+  from {
+    width: 0;
+  }
+}
+
+* {
+  transition: all 500ms ease;
+}
+
+a {
+  text-decoration: none;
+  color: royalBlue;
+}
+
+html {
+  box-sizing: border-box;
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  font-family: "Courier";
+  height: 100%;
+  width: 100%;
+  margin: 0;
+}
+
+.container {
+/*  font-family: "Consolas", "Courier", fixed-width;
+*/  font-family: 'Roboto Mono', monospace;
+
+  margin: 0 auto;
+  padding: 0 0 20px 0;
+  max-width: 70%;
+}
+
+
+h1 {
+  font-size: 40px;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 100%;
+  animation: type 4s steps(60, end);
+}
+
+p {
+  font-size: 30px;
+}
+
+span {
+  animation: blink 1s infinite;
+}
+
+.animated-from-top {
+  -webkit-transform: translateY(-200%);
+  -moz-transform: translateY(-200%);
+  -ms-transform: translateY(-200%);
+  -o-transform: translateY(-200%);
+  transform: translateY(-200%);
+  /*Default over top*/
+}
+
+.animated-from-bottom {
+  -webkit-transform: translateY(200%);
+  -moz-transform: translateY(200%);
+  -ms-transform: translateY(200%);
+  -o-transform: translateY(200%);
+  transform: translateY(200%);
+  /*Default over bottom*/
+}
+
+@media (max-width: 768px) {
+  #intro {
+    padding-top: 25px;
+  }
+  h1 {
+    width: 100%;
+    font-size: 30px;
+  }
+  p {
+    font-size: 25px;
+  }
+  .modal-content {
+    margin: 25px auto;
+  }
+  .main-content {
+    max-height: 400px;
+  }
+}
